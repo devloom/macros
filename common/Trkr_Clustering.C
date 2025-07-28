@@ -167,8 +167,8 @@ void TPC_Clustering()
 
   auto tpcclusterizer = new TpcClusterizer;
   tpcclusterizer->Verbosity(verbosity);
+  tpcclusterizer->set_rawdata_reco();
   tpcclusterizer->set_do_hit_association(G4TPC::DO_HIT_ASSOCIATION);
-  tpcclusterizer->set_min_err_squared(0.);
   se->registerSubsystem(tpcclusterizer);
 
   auto tpcclustercleaner = new TpcClusterCleaner;
